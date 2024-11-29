@@ -1,10 +1,80 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Serge</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Cleaning Services in Georgia">
+  <title>Shvets Cleaning</title>
+  <link rel="stylesheet" href="styles.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXXXX-X');
+  </script>
 </head>
 <body>
-<p>Shvets</p>
+  <header>
+    <h1>Shvets Cleaning</h1>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#calculator">Price Calculator</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
+  <section id="hero">
+    <h2>We make your space shine!</h2>
+    <p>Professional cleaning services for homes and offices.</p>
+    <a href="#calculator" class="btn">Calculate Your Price</a>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="service">
+      <h3>Home Cleaning</h3>
+      <p>Thorough cleaning for every corner of your house.</p>
+    </div>
+    <div class="service">
+      <h3>Office Cleaning</h3>
+      <p>Maintain a clean and productive workspace.</p>
+    </div>
+  </section>
+
+  <section id="calculator">
+    <h2>Price Calculator</h2>
+    <form id="price-calculator">
+      <label for="type">Type of Service:</label>
+      <select id="type" name="type">
+        <option value="home">Home Cleaning</option>
+        <option value="office">Office Cleaning</option>
+      </select>
+      <label for="size">Size (sq ft):</label>
+      <input type="number" id="size" name="size" placeholder="Enter square footage">
+      <label for="extras">Additional Services:</label>
+      <input type="checkbox" id="deep-cleaning" name="extras" value="Deep Cleaning"> Deep Cleaning
+      <button type="submit">Calculate</button>
+    </form>
+    <div id="price-output"></div>
+  </section>
+
+  <section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <p>"The best cleaning service in Georgia!"</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@shvetscleaning.com</p>
+    <p>Phone: +1 234 567 890</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Shvets Cleaning. All rights reserved.</p>
+  </footer>
 </body>
 </html>
