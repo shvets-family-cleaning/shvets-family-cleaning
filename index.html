@@ -151,5 +151,13 @@
         }
     </script>
 
+<script>
+    document.querySelector('a[href="#menu"]').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('menu').classList.toggle('open');
+    });
+</script>
+
+
 </body>
 </html>
