@@ -1,23 +1,25 @@
 document.getElementById("calculate").addEventListener("click", () => {
   const type = document.getElementById("type").value;
-  const bedrooms = parseInt(document.getElementById("bedrooms").value);
-  const bathrooms = parseInt(document.getElementById("bathrooms").value);
+  const bedrooms = parseInt(document.getElementById("bedrooms").value, 10);
+  const bathrooms = parseInt(document.getElementById("bathrooms").value, 10);
 
-  let basePrice = type === "home" ? 100 : type === "office" ? 150 : 75;
-  const price = basePrice + bedrooms * 20 + bathrooms * 15;
+  let basePrice = 0;
 
-  document.getElementById("price").textContent = `Total Price: $${price}`;
-});
+  switch (type) {
+    case "home":
+      basePrice = 100;
+      break;
+    case "office":
+      basePrice = 200;
+      break;
+    case "apartment":
+      basePrice = 80;
+      break;
+    case "airbnb":
+      basePrice = 120;
+      break;
+  }
 
-// Reviews API simulation
-const reviews = [
-  { name: "John Doe", text: "Fantastic service!" },
-  { name: "Jane Smith", text: "Highly recommend Shvets Cleaning Pro!" },
-];
-
-const reviewContainer = document.getElementById("review-container");
-reviews.forEach(review => {
-  const reviewDiv = document.createElement("div");
-  reviewDiv.innerHTML = `<strong>${review.name}</strong><p>${review.text}</p>`;
-  reviewContainer.appendChild(reviewDiv);
+  const total = basePrice + bedrooms * 10 + bathrooms * 15;
+  document.getElementById("price").textContent = `Total Price: $${total}`;
 });
